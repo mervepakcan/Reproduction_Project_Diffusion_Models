@@ -18,7 +18,7 @@ The original paper proposes a novel method for **text-to-image generation** usin
 
 ---
 
-## 🧪 Reproduction Scope
+## Reproduction Scope
 
 This project reproduces only the **inference** aspect of the method, using a simplified dataset (MNIST). The goals are:
 
@@ -29,7 +29,7 @@ Instead of text prompts, digit labels (0–9) are used, and the generation is pe
 
 ---
 
-## 🔧 What This Project Does
+##  What This Project Does
 
 - Uses a **pretrained U-Net DDPM**
 - Applies a **horizontal dissimilarity loss** to steer image generation
