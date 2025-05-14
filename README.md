@@ -1,6 +1,6 @@
 # 🌀 Reproducing *Diffusion Priors as Plug-and-Play Models* on MNIST
 Denoising diffusion probabilistic models(DDPMs) have emerged as powerful generative models capable of modeling complex data distributions.
-Traditionally, DDPMs are retrained as stand-alone generators for each task. To overcome this limitation, a plug-and-play framework using pretrained DDPMs as conditional priors was introduced, enabling controllable generation through auxiliary differentiable
+Traditionally, DDPMs are retrained as stand-alone generators for each task. To overcome this limitation, a plug-and-play framework using pretrained DDPMs as conditional priors was introduced, enabling controllable generation through auxiliary differentiable constraints without modifying model weights.
 
 This is a reproduction project based on the NeurIPS 2022 paper:  
 **[Diffusion Models as Plug-and-Play Priors](https://proceedings.neurips.cc/paper_files/paper/2022/hash/5e6cec2a9520708381fe520246018e8b-Abstract-Conference.html)**  
@@ -25,16 +25,16 @@ This project reproduces only the **inference** aspect of the method, using a sim
 - ✅ To verify whether pretrained DDPMs can be guided via plug-and-play constraints
 - ✅ To demonstrate controllability without retraining
   
-Instead of text prompts, we use **digit labels** (0–9), and instead of CLIP space, we work directly in the image space.
+Instead of text prompts, digit labels (0–9) are used, and the generation is performed directly in image space rather than CLIP latent space.
 
 ---
 
 ## 🔧 What This Project Does
 
-- 🧠 Uses a **pretrained U-Net DDPM**
-- 🕹️ Applies a **horizontal dissimilarity loss** to steer image generation
-- 🔄 **Only optimizes the input noise vector** (model weights are frozen)
-- 🎯 Performs **plug-and-play inference** on MNIST digits
+- Uses a **pretrained U-Net DDPM**
+- Applies a **horizontal dissimilarity loss** to steer image generation
+- **Only optimizes the input noise vector** (model weights are frozen)
+- Performs **plug-and-play inference** on MNIST digits
 
 ---
 
